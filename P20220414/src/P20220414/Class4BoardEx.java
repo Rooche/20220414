@@ -10,7 +10,7 @@ public class Class4BoardEx {
 		boardList.init(5);
 
 		while (true) {
-			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.한건조회 9.종료");
+			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.한건조회 6.작성자조회 9.종료");
 			System.out.println("선택 > >");
 			int menu = sc.nextInt();
 			sc.nextLine();
@@ -83,7 +83,11 @@ public class Class4BoardEx {
 					getBoard.getDetailInfo(); // 출력을 하겠습니다.
 				}
 
-			} else if (menu == 9) {
+			} else if(menu ==6) {
+				System.out.println("작성자 조회");
+				int bNo = Integer.parseInt(sc.nextLine());
+				if
+			}else if (menu == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
 

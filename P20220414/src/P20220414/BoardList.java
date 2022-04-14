@@ -79,4 +79,8 @@ public class BoardList {
 	public Board[] boardList() {
 		return boards;
 	}
+	//작성자 조회기능
+	puclic Board[] getW
+	
+	}
 }
