@@ -6,6 +6,7 @@ public class SingletonEx {
 	public static void main(String[] args) {
 		Singleton.getInstance();
 		
+		Car car;
 	}
 
 }

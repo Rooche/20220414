@@ -1,4 +1,5 @@
 package P2022041Statics;
+
 class car{
 	
 	
