@@ -31,9 +31,9 @@ public class Class4BoardEx {
 				int chk = boardList.addBoard(newBod);
 				if (chk == 0) {
 					System.out.println("정상입력되었습니다.");
-				} else if(chk == -1){
+				} else if (chk == -1) {
 					System.out.println("입력을 못했습니다");
-				} else if(chk == 1) {
+				} else if (chk == 1) {
 					System.out.println("이미 있는 번호입니다.");
 				}
 
@@ -83,11 +83,20 @@ public class Class4BoardEx {
 					getBoard.getDetailInfo(); // 출력을 하겠습니다.
 				}
 
-			} else if(menu ==6) {
-				System.out.println("작성자 조회");
-				int bNo = Integer.parseInt(sc.nextLine());
-				if
-			}else if (menu == 9) {
+			} else if (menu == 6) {
+				System.out.println("작성자 조회 >>");
+				String sWriter = sc.nextLine();
+				Board[] writerList = boardList.getWriterList(sWriter);
+				// writerList 내용출력
+				System.out.println("게시글번호         제목                   내용      사용자    조회수");
+				System.out.println("=============================================================");
+				for (Board board : writerList) {
+					if (board != null) {
+						board.getInfo();
+					}
+				}
+
+			} else if (menu == 9) {
 				System.out.println("프로그램을 종료합니다.");
 				break;
 
