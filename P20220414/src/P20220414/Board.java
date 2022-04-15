@@ -70,12 +70,17 @@ public class Board {
 		// 게시글번호 작성자
 		// 제목 조회수
 		// 내용
-		String info = "==================================================="+
-		              "게시글번호 : %2d              작성자 : %-5s\n"+
-		              "제목 : %-15s                 조회수 : %3d\n"+
-		              "내용 : %-30s\n"+
-		              "===================================================\n";
+		String info = "===================================================" + "게시글번호 : %2d              작성자 : %-5s\n"
+				+ "제목 : %-15s                 조회수 : %3d\n" + "내용 : %-30s\n"
+				+ "===================================================\n";
 		System.out.printf("", this.boardNo, this.writer, this.title, this.searchCnt, this.content);
+	}
+
+	// 컨트롤 쉬프트 S누르고 toString 눌렀음
+	@Override // 부모클래스 toString -> 자식클래스가 재정의하겠다
+	public String toString() { 
+		return "Board [boardNo=" + boardNo + ", title=" + title + ", content=" + content + ", writer=" + writer
+				+ ", searchCnt=" + searchCnt + "]";
 	}
 
 }

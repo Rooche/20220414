@@ -1,5 +1,6 @@
 package P20220414;
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Class4BoardEx {
@@ -12,9 +13,15 @@ public class Class4BoardEx {
 		while (true) {
 			System.out.println("1.추가 2.수정 3.목록 4.삭제 5.한건조회 6.작성자조회 9.종료");
 			System.out.println("선택 > >");
-			int menu = sc.nextInt();
+			int menu = -1;
+			try { // 숫자만 쳐야하는데 글자를 적으면 나오는 오류 해결방법
+				  // int menu가 안에 있으면 오류가나서 밖으로 int menu를 뺀 뒤에 -1를 썼다
+			menu = sc.nextInt(); //숫자반환
+			} catch(InputMismatchException e) {
+				System.out.println("잘못된 처리를 입력하세요");
+			} // 해결방법
 			sc.nextLine();
-
+			
 			if (menu == 1) {
 				System.out.print("글 번호 입력 >>");
 				int bNo = sc.nextInt();
@@ -104,7 +111,5 @@ public class Class4BoardEx {
 				System.out.println("정확한 메뉴를 선택하세요.");
 			}
 
-		}
-		System.out.println("프로그램 종료");
-	}
-}
+		}System.out.println("프로그램 종료");
+}}
